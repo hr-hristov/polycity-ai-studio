@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Studio — Polycity</title>
+<meta name="description" content="AI Studio is the mode of Polycity where Agent leads the work: one talk in which every question runs by itself, and beside it a view of the city that Agent alone drives. Nine films of the running product.">
+<style>
+  :root { --ink: #1d1e22; --soft: #5b5d66; --line: #e3e0d8; --paper: #faf8f4; --card: #ffffff; --accent: #6b3fd4; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 20px 64px; }
+  .brand { font-weight: 800; letter-spacing: 0.18em; font-size: 13px; color: var(--accent); margin: 0 0 18px; }
+  h1 { font: 700 38px/1.15 Georgia, "Times New Roman", serif; margin: 0 0 14px; }
+  .lead { color: var(--soft); margin: 0 0 14px; max-width: 46em; }
+  .lead strong { color: var(--ink); font-weight: 600; }
+  nav { margin: 30px 0 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); overflow: hidden; }
+  nav h2 { font: 700 12px/1 system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--soft); margin: 0; padding: 14px 18px 12px; border: 0; }
+  nav ol { margin: 0; padding: 0; list-style: none; counter-reset: film; display: grid; grid-template-columns: 1fr 1fr; }
+  nav li { counter-increment: film; border-top: 1px solid var(--line); }
+  nav li:nth-child(odd) { border-right: 1px solid var(--line); }
+  nav a { display: grid; grid-template-columns: 2em 1fr auto; gap: 8px; align-items: baseline; padding: 11px 18px; color: var(--ink); text-decoration: none; }
+  nav a::before { content: counter(film); color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+  nav a:hover { background: #f4f0fb; }
+  nav time, h2 time { color: var(--soft); font: 500 14px/1 system-ui, sans-serif; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  section { padding-top: 44px; }
+  .num { font: 700 13px/1 system-ui, sans-serif; letter-spacing: 0.14em; color: var(--accent); margin: 0 0 8px; }
+  section h2 { font: 700 26px/1.25 Georgia, "Times New Roman", serif; margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+  section > p { margin: 0 0 18px; max-width: 46em; color: var(--soft); }
+  video { width: 100%; height: auto; aspect-ratio: 16 / 10; display: block; border-radius: 10px; border: 1px solid var(--line); background: #10121c; }
+  ul { margin: 14px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  ul li { position: relative; padding: 9px 0 9px 22px; border-bottom: 1px solid var(--line); }
+  ul li::before { content: ""; position: absolute; left: 4px; top: 1.05em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--soft); font-size: 14px; max-width: 52em; }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 700px) {
+    h1 { font-size: 28px; }
+    main { padding-top: 28px; }
+    nav ol { grid-template-columns: 1fr; }
+    nav li:nth-child(odd) { border-right: 0; }
+    section h2 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">POLYCITY</p>
+  <h1>AI Studio: ask the city a question, and watch Agent show the answer</h1>
+  <p class="lead">Polycity is a city transport simulator. A planner describes a change to a city, such as a street closed, a fare raised or a bus line added, the platform simulates a whole day, and the planner reads what happened to traffic, transit, parking, exhaust and noise.</p>
+  <p class="lead"><strong>AI Studio</strong> is the mode of Polycity where <strong>Agent</strong>, Polycity's assistant, leads that work. The whole app becomes one talk. Every question the planner asks runs by itself as a work of its own, and beside the talk stands Agent's view: the map, the results or the draft Agent is talking about. Only Agent changes what the view shows. The planner asks, answers Agent's questions, and presses a place on the map to ask about it.</p>
+  <p class="lead">The nine films below are the running product, filmed at the pace a person reads, with a line at the foot of the screen saying what is happening. Agent's answers in them are real answers, given while the camera ran.</p>
+
+  <nav aria-label="The films">
+    <h2>The films</h2>
+    <ol>
+      <li><a href="#the-talk"><span>One talk, every question a work</span><time>1:58</time></a></li>
+      <li><a href="#agents-view"><span>Agent's view beside the talk</span><time>2:01</time></a></li>
+      <li><a href="#a-figure-in-results"><span>A figure, shown where it was read</span><time>1:34</time></a></li>
+      <li><a href="#a-question-moves-the-view"><span>A question moves the view</span><time>2:13</time></a></li>
+      <li><a href="#asked-before-changed"><span>Agent asks before it changes a draft</span><time>3:05</time></a></li>
+      <li><a href="#four-at-once"><span>Four questions answered at once</span><time>2:39</time></a></li>
+      <li><a href="#a-yes-that-waits"><span>A yes that waits for the planner</span><time>1:33</time></a></li>
+      <li><a href="#where-traffic-moved"><span>Where traffic moved, ranked</span><time>1:52</time></a></li>
+      <li><a href="#looks-and-bulgarian"><span>Every look, and Bulgarian</span><time>4:03</time></a></li>
+    </ol>
+  </nav>
+
+  <section id="the-talk">
+    <p class="num">FILM 1</p>
+    <h2>One talk, every question a work <time>1:58</time></h2>
+    <p>A planner turns AI Studio on from the menu and reads the talk: what waits for them, what Agent is answering and what is finished.</p>
+    <video controls preload="none" playsinline poster="the-talk.jpg">
+      <source src="the-talk.mp4" type="video/mp4">
+      <source src="the-talk.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>AI Studio is one talk with Agent. Every question asked is a work in it, and the ask box stands at its foot.</li>
+      <li>Agent's view stands beside the talk from the start, opened on the newest page a work made.</li>
+      <li>The bar counts the works that wait for the planner, the ones being answered and the finished ones.</li>
+      <li>A question Agent stopped on is one card: the change drawn on its street, its facts in one strip, and its button.</li>
+      <li>Finished opens every finished work, twenty-five a page, each row naming what the work made.</li>
+      <li>The ask box names the model the next question leaves with and its effort: Quick, Balanced or Thorough.</li>
+      <li>Leave AI Studio shows the regular app on the same page. Turned on again, the talk stands as it did.</li>
+    </ul>
+  </section>
+
+  <section id="agents-view">
+    <p class="num">FILM 2</p>
+    <h2>Agent's view beside the talk <time>2:01</time></h2>
+    <p>A finished comparison is pressed, and the two runs it compared stand on the map beside its answer.</p>
+    <video controls preload="none" playsinline poster="agents-view.jpg">
+      <source src="agents-view.mp4" type="video/mp4">
+      <source src="agents-view.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>A pressed work opens with its whole answer. Beside it stands Compare, on the two runs the answer compared.</li>
+      <li>The view's head is Agent's mark and one strip naming what it shows.</li>
+      <li>The view holds the map, its colour key and the figures. It has no menu, no tool row, no run picker and no hours to press.</li>
+      <li>Another work pressed folds the comparison to one line: its question, the first words of its answer and its date.</li>
+      <li>One thing is the planner's to do in the view: press a place on the map. The place is ringed, and the ask box names it.</li>
+    </ul>
+  </section>
+
+  <section id="a-figure-in-results">
+    <p class="num">FILM 3</p>
+    <h2>A figure, shown where it was read <time>1:34</time></h2>
+    <p>An answer that gave one figure brings the run's Results into the view, on the measure the figure came from.</p>
+    <video controls preload="none" playsinline poster="a-figure-in-results.jpg">
+      <source src="a-figure-in-results.mp4" type="video/mp4">
+      <source src="a-figure-in-results.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>Pressing the work is enough. Agent's view stands on Results, where the figure was read.</li>
+      <li>A press on a card's name puts that card in the view, and the card is ringed for as long as the view shows it.</li>
+      <li>Leave AI Studio opens the same Results as the regular app shows it, with its menu, its tools and its run pickers.</li>
+      <li>Turned on again, AI Studio shows the work's view as Agent left it.</li>
+    </ul>
+  </section>
+
+  <section id="a-question-moves-the-view">
+    <p class="num">FILM 4</p>
+    <h2>A question moves the view <time>2:13</time></h2>
+    <p>The planner asks to see congestion at 17:00, then at 08:00, and presses nothing else.</p>
+    <video controls preload="none" playsinline poster="a-question-moves-the-view.jpg">
+      <source src="a-question-moves-the-view.mp4" type="video/mp4">
+      <source src="a-question-moves-the-view.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>With no work pressed, Agent's view holds what it last showed.</li>
+      <li>The question asks Agent to show something. Agent's own step opens the run's Results on Congestion at 17:00, while the answer is still being written.</li>
+      <li>Another hour takes another question, asked in the same work.</li>
+      <li>The view moves to 08:00 by Agent's step alone, and its head names the new hour.</li>
+    </ul>
+  </section>
+
+  <section id="asked-before-changed">
+    <p class="num">FILM 5</p>
+    <h2>Agent asks before it changes a draft <time>3:05</time></h2>
+    <p>A street closure is asked for in words. Agent finds the street, shows the change dashed on the map, and waits for a yes.</p>
+    <video controls preload="none" playsinline poster="asked-before-changed.jpg">
+      <source src="asked-before-changed.mp4" type="video/mp4">
+      <source src="asked-before-changed.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>The closure is asked for in words. The planner opens no editor and picks no street.</li>
+      <li>Agent asks first. Its view already stands on the editor's map of the scenario, moved to the street, with the closure dashed and Agent's ring on it.</li>
+      <li>The head and the key on the map both say what the dashes are: Not in the draft yet.</li>
+      <li>The question's card carries Add to draft, Change and Skip.</li>
+      <li>After the yes the dashes are gone, and the closure stands on the map as one of the draft's own changes.</li>
+      <li>Undo this answer, in the talk, takes the closure out of the draft again, and the map draws the draft as it was.</li>
+    </ul>
+  </section>
+
+  <section id="four-at-once">
+    <p class="num">FILM 6</p>
+    <h2>Four questions answered at once <time>2:39</time></h2>
+    <p>Four questions are asked one after another, without waiting for an answer, and one line over the ask box follows all of them.</p>
+    <video controls preload="none" playsinline poster="four-at-once.jpg">
+      <source src="four-at-once.mp4" type="video/mp4">
+      <source src="four-at-once.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>One line over the ask box carries all four questions as numbered marks, each at the step Agent has reached for it.</li>
+      <li>A press on a mark makes the sentence under the line speak for that question.</li>
+      <li>A fifth question is typed, and Send stands grey with its reason over it until one of the four has finished.</li>
+      <li>Each work finishes with its own answer, and the line leaves when the last answer has landed.</li>
+      <li>The bin asks first, naming the work and what goes with it.</li>
+    </ul>
+  </section>
+
+  <section id="a-yes-that-waits">
+    <p class="num">FILM 7</p>
+    <h2>A yes that waits for the planner <time>1:33</time></h2>
+    <p>Agent asks first before it makes a file that others can open, and the question is still there when the planner comes back.</p>
+    <video controls preload="none" playsinline poster="a-yes-that-waits.jpg">
+      <source src="a-yes-that-waits.mp4" type="video/mp4">
+      <source src="a-yes-that-waits.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>The export is asked for like any other question.</li>
+      <li>Agent stops on a question. On the line its mark is held at Answering, and the sentence reads Waiting for you.</li>
+      <li>The question's card asks before the file is made, with Export it, Change and Not yet.</li>
+      <li>Opened again later, the work still waits, with its question kept as one card.</li>
+      <li>The yes is given on the card. Agent takes the same work up again, and nothing asks a second time.</li>
+      <li>The work is finished with its file card.</li>
+    </ul>
+  </section>
+
+  <section id="where-traffic-moved">
+    <p class="num">FILM 8</p>
+    <h2>Where traffic moved, ranked <time>1:52</time></h2>
+    <p>A question about where traffic moved between two runs is answered with a ranked comparison, drawn on the map.</p>
+    <video controls preload="none" playsinline poster="where-traffic-moved.jpg">
+      <source src="where-traffic-moved.mp4" type="video/mp4">
+      <source src="where-traffic-moved.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>Agent's step opens Compare for the two runs in its view, while the answer is still being written.</li>
+      <li>The answer is a comparison card of ranked rows, each with this run's figure and the compared run's.</li>
+      <li>The card draws where its rows stand, each place with its outline.</li>
+      <li>A pressed place is ringed in the card, and the ask box names it for the next question.</li>
+    </ul>
+  </section>
+
+  <section id="looks-and-bulgarian">
+    <p class="num">FILM 9</p>
+    <h2>Every look, and Bulgarian <time>4:03</time></h2>
+    <p>The same talk and the same view under four of Polycity's looks, and then in Bulgarian.</p>
+    <video controls preload="none" playsinline poster="looks-and-bulgarian.jpg">
+      <source src="looks-and-bulgarian.mp4" type="video/mp4">
+      <source src="looks-and-bulgarian.webm" type="video/webm">
+    </video>
+    <ul>
+      <li>The talk under Classic, Blocks, Route map and Lamplight: the bar's counts, the works and the ask box, with Agent's view held beside them.</li>
+      <li>Under each look, a pressed work with Compare in Agent's view.</li>
+      <li>In Bulgarian the bar, the talk and the ask box speak Bulgarian, and Agent is Агент.</li>
+      <li>Agent's view is named in Bulgarian too. Words a planner wrote, such as a work's question, stay as they were written.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Filmed on 17 November 2026 in the running product, in a workspace set up for Sofia. Polycity works the same way for any city it holds.</p>
+    <p>The works, runs and scenarios in the films are sample data.</p>
+  </footer>
+</main>
+</body>
+</html>
